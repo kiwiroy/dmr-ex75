@@ -40,9 +40,11 @@ From: [austech.info]( http://www.austech.info/showthread.php/53480-Panasonic-DVR
 > Connected the firewire enclosure with the source HDD, and noted DiskArbitrator showed it connect as disk2.
 
 > In the Mac Terminal window used dd to copy the first 200MB off the disk into a file. (From what I'd read elsewhere I think only 10MB is required, but it only took 2mins to read 200MB so why not?)
+> ```
 >        # mkdir EX75
 >        # cd EX75
 >        # dd bs=512 if=/dev/rdisk2 of=./EX75_HDD.dat count=409600
+> ```
 > where bs=512 sets the input & output block sizes o 512bytes, and doesn't aggregate short blocks,
 > disk2 is the drive DiskArbitrator detected when I plugged in the firewire box,
 > of tells dd where to create the 200MB "EX75_HDD.dat" file (on my Mac's internal disk, in the EX75 directory I created and changed directory to in the preceding lines),
