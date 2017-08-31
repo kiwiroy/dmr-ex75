@@ -41,9 +41,9 @@ From: [austech.info]( http://www.austech.info/showthread.php/53480-Panasonic-DVR
 
 > In the Mac Terminal window used dd to copy the first 200MB off the disk into a file. (From what I'd read elsewhere I think only 10MB is required, but it only took 2mins to read 200MB so why not?)
 > ```
->        # mkdir EX75
->        # cd EX75
->        # dd bs=512 if=/dev/rdisk2 of=./EX75_HDD.dat count=409600
+> # mkdir EX75
+> # cd EX75
+> # dd bs=512 if=/dev/rdisk2 of=./EX75_HDD.dat count=409600
 > ```
 > where bs=512 sets the input & output block sizes o 512bytes, and doesn't aggregate short blocks,
 > disk2 is the drive DiskArbitrator detected when I plugged in the firewire box,
@@ -55,6 +55,7 @@ From: [austech.info]( http://www.austech.info/showthread.php/53480-Panasonic-DVR
 > The Mac Finder saw the destination disk and asked if I wanted to format it, I said no. Noted that DiskArbitrator showed the destination disk as disk2.
 
 > In the Mac Terminal window used dd to copy the file to the destination disk, only took 2mins:
->        # dd bs=512 if=./EX75_HDD.dat of=/dev/rdisk2
-
+> ```
+> # dd bs=512 if=./EX75_HDD.dat of=/dev/rdisk2
+> ```
 > Installed the destination disk in my destination EX75 and it booted successfully. I can't remember the details, but at some point the EX75 asked to "reformat" the HDD, I said yes.
